@@ -116,11 +116,19 @@ const getDetail = ($, tabsetBasics, tab = 0) => {
     const evoName = $(".ent-name", e)
       .text()
       .toLowerCase();
+
     if (evoName) {
-      if (evoName === name.toLowerCase()) {
-        icon = $(".img-sprite", e).attr("data-src");
+      const isAlolan =
+        $(".ent-name", e)
+          .parent()
+          .children("small").length > 2;
+
+      if (!isAlolan) {
+        if (evoName === name.toLowerCase()) {
+          icon = $(".img-sprite", e).attr("data-src");
+        }
+        evolutions.push(evoName);
       }
-      evolutions.push(evoName);
     }
   });
 

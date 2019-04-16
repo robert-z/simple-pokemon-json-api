@@ -782,7 +782,7 @@
         "link": "https://pokemondb.net/pokedex/rattata",
         "name": "Rattata",
         "description": "Rattata is a Normal type Pokémon introduced in Generation 1. It is known as the Mouse Pokémon.\nRattata has a new Alolan form introduced in Pokémon Sun/Moon.",
-        "icon": "https://img.pokemondb.net/sprites/ultra-sun-ultra-moon/small/rattata-alolan.jpg",
+        "icon": "https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/rattata.png",
         "image": "https://img.pokemondb.net/artwork/rattata.jpg",
         "types": [
             "Normal"
@@ -805,8 +805,6 @@
             "speed": "72"
         },
         "evolutions": [
-            "rattata",
-            "raticate",
             "rattata",
             "raticate"
         ],
@@ -837,8 +835,6 @@
                 },
                 "evolutions": [
                     "rattata",
-                    "raticate",
-                    "rattata",
                     "raticate"
                 ]
             }
@@ -849,7 +845,7 @@
         "link": "https://pokemondb.net/pokedex/raticate",
         "name": "Raticate",
         "description": "Raticate is a Normal type Pokémon introduced in Generation 1. It is known as the Mouse Pokémon.",
-        "icon": "https://img.pokemondb.net/sprites/ultra-sun-ultra-moon/small/raticate-alolan.jpg",
+        "icon": "https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/raticate.png",
         "image": "https://img.pokemondb.net/artwork/raticate.jpg",
         "types": [
             "Normal"
@@ -872,8 +868,6 @@
             "speed": "97"
         },
         "evolutions": [
-            "rattata",
-            "raticate",
             "rattata",
             "raticate"
         ],
@@ -903,8 +897,6 @@
                     "speed": "77"
                 },
                 "evolutions": [
-                    "rattata",
-                    "raticate",
                     "rattata",
                     "raticate"
                 ]
@@ -1072,7 +1064,6 @@
         "evolutions": [
             "pichu",
             "pikachu",
-            "raichu",
             "raichu"
         ],
         "mega": [
@@ -1098,7 +1089,6 @@
                 "evolutions": [
                     "pichu",
                     "pikachu",
-                    "raichu",
                     "raichu"
                 ]
             }
@@ -1109,7 +1099,7 @@
         "link": "https://pokemondb.net/pokedex/raichu",
         "name": "Raichu",
         "description": "Raichu is an Electric type Pokémon introduced in Generation 1. It is known as the Mouse Pokémon.\nRaichu has a new Alolan form introduced in Pokémon Sun/Moon.",
-        "icon": "https://img.pokemondb.net/sprites/ultra-sun-ultra-moon/small/raichu-alolan.jpg",
+        "icon": "https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/raichu.png",
         "image": "https://img.pokemondb.net/artwork/raichu.jpg",
         "types": [
             "Electric"
@@ -1133,7 +1123,6 @@
         "evolutions": [
             "pichu",
             "pikachu",
-            "raichu",
             "raichu"
         ],
         "mega": [
@@ -1162,7 +1151,6 @@
                 "evolutions": [
                     "pichu",
                     "pikachu",
-                    "raichu",
                     "raichu"
                 ]
             }
@@ -1173,7 +1161,7 @@
         "link": "https://pokemondb.net/pokedex/sandshrew",
         "name": "Sandshrew",
         "description": "Sandshrew is a Ground type Pokémon introduced in Generation 1. It is known as the Mouse Pokémon.\nSandshrew has a new Alolan form introduced in Pokémon Sun/Moon.",
-        "icon": "https://img.pokemondb.net/sprites/ultra-sun-ultra-moon/small/sandshrew-alolan.jpg",
+        "icon": "https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/sandshrew.png",
         "image": "https://img.pokemondb.net/artwork/sandshrew.jpg",
         "types": [
             "Ground"
@@ -1195,8 +1183,6 @@
             "speed": "40"
         },
         "evolutions": [
-            "sandshrew",
-            "sandslash",
             "sandshrew",
             "sandslash"
         ],
@@ -1226,8 +1212,6 @@
                 },
                 "evolutions": [
                     "sandshrew",
-                    "sandslash",
-                    "sandshrew",
                     "sandslash"
                 ]
             }
@@ -1238,7 +1222,7 @@
         "link": "https://pokemondb.net/pokedex/sandslash",
         "name": "Sandslash",
         "description": "Sandslash is a Ground type Pokémon introduced in Generation 1. It is known as the Mouse Pokémon.\nSandslash has a new Alolan form introduced in Pokémon Sun/Moon.",
-        "icon": "https://img.pokemondb.net/sprites/ultra-sun-ultra-moon/small/sandslash-alolan.jpg",
+        "icon": "https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/sandslash.png",
         "image": "https://img.pokemondb.net/artwork/sandslash.jpg",
         "types": [
             "Ground"
@@ -1260,8 +1244,6 @@
             "speed": "65"
         },
         "evolutions": [
-            "sandshrew",
-            "sandslash",
             "sandshrew",
             "sandslash"
         ],
@@ -1290,8 +1272,6 @@
                     "speed": "65"
                 },
                 "evolutions": [
-                    "sandshrew",
-                    "sandslash",
                     "sandshrew",
                     "sandslash"
                 ]
@@ -1577,7 +1557,7 @@
         "link": "https://pokemondb.net/pokedex/vulpix",
         "name": "Vulpix",
         "description": "Vulpix is a Fire type Pokémon introduced in Generation 1. It is known as the Fox Pokémon.\nVulpix has a new Alolan form introduced in Pokémon Sun/Moon.",
-        "icon": "https://img.pokemondb.net/sprites/ultra-sun-ultra-moon/small/vulpix-alolan.jpg",
+        "icon": "https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/vulpix.png",
         "image": "https://img.pokemondb.net/artwork/vulpix.jpg",
         "types": [
             "Fire"
@@ -1599,8 +1579,6 @@
             "speed": "65"
         },
         "evolutions": [
-            "vulpix",
-            "ninetales",
             "vulpix",
             "ninetales"
         ],
@@ -1629,8 +1607,6 @@
                 },
                 "evolutions": [
                     "vulpix",
-                    "ninetales",
-                    "vulpix",
                     "ninetales"
                 ]
             }
@@ -1641,7 +1617,7 @@
         "link": "https://pokemondb.net/pokedex/ninetales",
         "name": "Ninetales",
         "description": "Ninetales is a Fire type Pokémon introduced in Generation 1. It is known as the Fox Pokémon.",
-        "icon": "https://img.pokemondb.net/sprites/ultra-sun-ultra-moon/small/ninetales-alolan.jpg",
+        "icon": "https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/ninetales.png",
         "image": "https://img.pokemondb.net/artwork/ninetales.jpg",
         "types": [
             "Fire"
@@ -1663,8 +1639,6 @@
             "speed": "100"
         },
         "evolutions": [
-            "vulpix",
-            "ninetales",
             "vulpix",
             "ninetales"
         ],
@@ -1693,8 +1667,6 @@
                     "speed": "109"
                 },
                 "evolutions": [
-                    "vulpix",
-                    "ninetales",
                     "vulpix",
                     "ninetales"
                 ]
@@ -2085,7 +2057,7 @@
         "link": "https://pokemondb.net/pokedex/diglett",
         "name": "Diglett",
         "description": "Diglett is a Ground type Pokémon introduced in Generation 1. It is known as the Mole Pokémon.",
-        "icon": "https://img.pokemondb.net/sprites/ultra-sun-ultra-moon/small/diglett-alolan.jpg",
+        "icon": "https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/diglett.png",
         "image": "https://img.pokemondb.net/artwork/diglett.jpg",
         "types": [
             "Ground"
@@ -2108,8 +2080,6 @@
             "speed": "95"
         },
         "evolutions": [
-            "diglett",
-            "dugtrio",
             "diglett",
             "dugtrio"
         ],
@@ -2140,8 +2110,6 @@
                 },
                 "evolutions": [
                     "diglett",
-                    "dugtrio",
-                    "diglett",
                     "dugtrio"
                 ]
             }
@@ -2152,7 +2120,7 @@
         "link": "https://pokemondb.net/pokedex/dugtrio",
         "name": "Dugtrio",
         "description": "Dugtrio is a Ground type Pokémon introduced in Generation 1. It is known as the Mole Pokémon.",
-        "icon": "https://img.pokemondb.net/sprites/ultra-sun-ultra-moon/small/dugtrio-alolan.jpg",
+        "icon": "https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/dugtrio.png",
         "image": "https://img.pokemondb.net/artwork/dugtrio.jpg",
         "types": [
             "Ground"
@@ -2175,8 +2143,6 @@
             "speed": "120"
         },
         "evolutions": [
-            "diglett",
-            "dugtrio",
             "diglett",
             "dugtrio"
         ],
@@ -2207,8 +2173,6 @@
                 },
                 "evolutions": [
                     "diglett",
-                    "dugtrio",
-                    "diglett",
                     "dugtrio"
                 ]
             }
@@ -2219,7 +2183,7 @@
         "link": "https://pokemondb.net/pokedex/meowth",
         "name": "Meowth",
         "description": "Meowth is a Normal type Pokémon introduced in Generation 1. It is known as the Scratch Cat Pokémon.\nMeowth has a new Alolan form introduced in Pokémon Sun/Moon.",
-        "icon": "https://img.pokemondb.net/sprites/ultra-sun-ultra-moon/small/meowth-alolan.jpg",
+        "icon": "https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/meowth.png",
         "image": "https://img.pokemondb.net/artwork/meowth.jpg",
         "types": [
             "Normal"
@@ -2242,8 +2206,6 @@
             "speed": "90"
         },
         "evolutions": [
-            "meowth",
-            "persian",
             "meowth",
             "persian"
         ],
@@ -2273,8 +2235,6 @@
                 },
                 "evolutions": [
                     "meowth",
-                    "persian",
-                    "meowth",
                     "persian"
                 ]
             }
@@ -2285,7 +2245,7 @@
         "link": "https://pokemondb.net/pokedex/persian",
         "name": "Persian",
         "description": "Persian is a Normal type Pokémon introduced in Generation 1. It is known as the Classy Cat Pokémon.\nPersian has a new Alolan form introduced in Pokémon Sun/Moon.",
-        "icon": "https://img.pokemondb.net/sprites/ultra-sun-ultra-moon/small/persian-alolan.jpg",
+        "icon": "https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/persian.png",
         "image": "https://img.pokemondb.net/artwork/persian.jpg",
         "types": [
             "Normal"
@@ -2308,8 +2268,6 @@
             "speed": "115"
         },
         "evolutions": [
-            "meowth",
-            "persian",
             "meowth",
             "persian"
         ],
@@ -2338,8 +2296,6 @@
                     "speed": "115"
                 },
                 "evolutions": [
-                    "meowth",
-                    "persian",
                     "meowth",
                     "persian"
                 ]
@@ -3057,7 +3013,7 @@
         "link": "https://pokemondb.net/pokedex/geodude",
         "name": "Geodude",
         "description": "Geodude is a Rock/Ground type Pokémon introduced in Generation 1. It is known as the Rock Pokémon.",
-        "icon": "https://img.pokemondb.net/sprites/ultra-sun-ultra-moon/small/geodude-alolan.jpg",
+        "icon": "https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/geodude.png",
         "image": "https://img.pokemondb.net/artwork/geodude.jpg",
         "types": [
             "Rock",
@@ -3081,9 +3037,6 @@
             "speed": "20"
         },
         "evolutions": [
-            "geodude",
-            "graveler",
-            "golem",
             "geodude",
             "graveler",
             "golem"
@@ -3116,9 +3069,6 @@
                 "evolutions": [
                     "geodude",
                     "graveler",
-                    "golem",
-                    "geodude",
-                    "graveler",
                     "golem"
                 ]
             }
@@ -3129,7 +3079,7 @@
         "link": "https://pokemondb.net/pokedex/graveler",
         "name": "Graveler",
         "description": "Graveler is a Rock/Ground type Pokémon introduced in Generation 1. It is known as the Rock Pokémon.",
-        "icon": "https://img.pokemondb.net/sprites/ultra-sun-ultra-moon/small/graveler-alolan.jpg",
+        "icon": "https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/graveler.png",
         "image": "https://img.pokemondb.net/artwork/graveler.jpg",
         "types": [
             "Rock",
@@ -3153,9 +3103,6 @@
             "speed": "35"
         },
         "evolutions": [
-            "geodude",
-            "graveler",
-            "golem",
             "geodude",
             "graveler",
             "golem"
@@ -3188,9 +3135,6 @@
                 "evolutions": [
                     "geodude",
                     "graveler",
-                    "golem",
-                    "geodude",
-                    "graveler",
                     "golem"
                 ]
             }
@@ -3201,7 +3145,7 @@
         "link": "https://pokemondb.net/pokedex/golem",
         "name": "Golem",
         "description": "Golem is a Rock/Ground type Pokémon introduced in Generation 1. It is known as the Megaton Pokémon.",
-        "icon": "https://img.pokemondb.net/sprites/ultra-sun-ultra-moon/small/golem-alolan.jpg",
+        "icon": "https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/golem.png",
         "image": "https://img.pokemondb.net/artwork/golem.jpg",
         "types": [
             "Rock",
@@ -3225,9 +3169,6 @@
             "speed": "45"
         },
         "evolutions": [
-            "geodude",
-            "graveler",
-            "golem",
             "geodude",
             "graveler",
             "golem"
@@ -3258,9 +3199,6 @@
                     "speed": "45"
                 },
                 "evolutions": [
-                    "geodude",
-                    "graveler",
-                    "golem",
                     "geodude",
                     "graveler",
                     "golem"
@@ -3673,7 +3611,7 @@
         "link": "https://pokemondb.net/pokedex/grimer",
         "name": "Grimer",
         "description": "Grimer is a Poison type Pokémon introduced in Generation 1. It is known as the Sludge Pokémon.\nGrimer has a new Alolan form introduced in Pokémon Sun/Moon.",
-        "icon": "https://img.pokemondb.net/sprites/ultra-sun-ultra-moon/small/grimer-alolan.jpg",
+        "icon": "https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/grimer.png",
         "image": "https://img.pokemondb.net/artwork/grimer.jpg",
         "types": [
             "Poison"
@@ -3696,8 +3634,6 @@
             "speed": "25"
         },
         "evolutions": [
-            "grimer",
-            "muk",
             "grimer",
             "muk"
         ],
@@ -3728,8 +3664,6 @@
                 },
                 "evolutions": [
                     "grimer",
-                    "muk",
-                    "grimer",
                     "muk"
                 ]
             }
@@ -3740,7 +3674,7 @@
         "link": "https://pokemondb.net/pokedex/muk",
         "name": "Muk",
         "description": "Muk is a Poison type Pokémon introduced in Generation 1. It is known as the Sludge Pokémon.\nMuk has a new Alolan form introduced in Pokémon Sun/Moon.",
-        "icon": "https://img.pokemondb.net/sprites/ultra-sun-ultra-moon/small/muk-alolan.jpg",
+        "icon": "https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/muk.png",
         "image": "https://img.pokemondb.net/artwork/muk.jpg",
         "types": [
             "Poison"
@@ -3763,8 +3697,6 @@
             "speed": "50"
         },
         "evolutions": [
-            "grimer",
-            "muk",
             "grimer",
             "muk"
         ],
@@ -3794,8 +3726,6 @@
                     "speed": "50"
                 },
                 "evolutions": [
-                    "grimer",
-                    "muk",
                     "grimer",
                     "muk"
                 ]
@@ -4258,7 +4188,6 @@
         },
         "evolutions": [
             "exeggcute",
-            "exeggutor",
             "exeggutor"
         ],
         "mega": []
@@ -4268,7 +4197,7 @@
         "link": "https://pokemondb.net/pokedex/exeggutor",
         "name": "Exeggutor",
         "description": "Exeggutor is a Grass/Psychic type Pokémon introduced in Generation 1. It is known as the Coconut Pokémon.\nExeggutor has a new Alolan form introduced in Pokémon Sun/Moon.",
-        "icon": "https://img.pokemondb.net/sprites/ultra-sun-ultra-moon/small/exeggutor-alolan.jpg",
+        "icon": "https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/exeggutor.png",
         "image": "https://img.pokemondb.net/artwork/exeggutor.jpg",
         "types": [
             "Grass",
@@ -4292,7 +4221,6 @@
         },
         "evolutions": [
             "exeggcute",
-            "exeggutor",
             "exeggutor"
         ],
         "mega": [
@@ -4321,7 +4249,6 @@
                 },
                 "evolutions": [
                     "exeggcute",
-                    "exeggutor",
                     "exeggutor"
                 ]
             }
@@ -4356,7 +4283,6 @@
         },
         "evolutions": [
             "cubone",
-            "marowak",
             "marowak"
         ],
         "mega": []
@@ -4366,7 +4292,7 @@
         "link": "https://pokemondb.net/pokedex/marowak",
         "name": "Marowak",
         "description": "Marowak is a Ground type Pokémon introduced in Generation 1. It is known as the Bone Keeper Pokémon.\nMarowak has a new Alolan form introduced in Pokémon Sun/Moon.",
-        "icon": "https://img.pokemondb.net/sprites/ultra-sun-ultra-moon/small/marowak-alolan.jpg",
+        "icon": "https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/marowak.png",
         "image": "https://img.pokemondb.net/artwork/marowak.jpg",
         "types": [
             "Ground"
@@ -4390,7 +4316,6 @@
         },
         "evolutions": [
             "cubone",
-            "marowak",
             "marowak"
         ],
         "mega": [
@@ -4420,7 +4345,6 @@
                 },
                 "evolutions": [
                     "cubone",
-                    "marowak",
                     "marowak"
                 ]
             }
@@ -4776,7 +4700,8 @@
                     "speedAttack": "60",
                     "speedDefense": "100",
                     "speed": "100"
-                }
+                },
+                "evolutions": []
             }
         ]
     },
@@ -5198,7 +5123,8 @@
                     "speedAttack": "65",
                     "speedDefense": "90",
                     "speed": "105"
-                }
+                },
+                "evolutions": []
             }
         ]
     },
@@ -5806,7 +5732,8 @@
                     "speedAttack": "70",
                     "speedDefense": "95",
                     "speed": "150"
-                }
+                },
+                "evolutions": []
             }
         ]
     },
@@ -6078,7 +6005,8 @@
                     "speedAttack": "154",
                     "speedDefense": "100",
                     "speed": "130"
-                }
+                },
+                "evolutions": []
             },
             {
                 "name": "Mega Mewtwo Y",
@@ -6100,7 +6028,8 @@
                     "speedAttack": "194",
                     "speedDefense": "120",
                     "speed": "140"
-                }
+                },
+                "evolutions": []
             }
         ]
     },
@@ -6829,7 +6758,6 @@
         "evolutions": [
             "pichu",
             "pikachu",
-            "raichu",
             "raichu"
         ],
         "mega": []
@@ -8347,7 +8275,8 @@
                     "speedAttack": "40",
                     "speedDefense": "105",
                     "speed": "75"
-                }
+                },
+                "evolutions": []
             }
         ]
     },
@@ -11456,7 +11385,8 @@
                     "speedAttack": "85",
                     "speedDefense": "115",
                     "speed": "20"
-                }
+                },
+                "evolutions": []
             }
         ]
     },
@@ -11510,7 +11440,8 @@
                     "speedAttack": "55",
                     "speedDefense": "95",
                     "speed": "50"
-                }
+                },
+                "evolutions": []
             }
         ]
     },
@@ -13243,7 +13174,8 @@
                     "speedAttack": "70",
                     "speedDefense": "70",
                     "speed": "70"
-                }
+                },
+                "evolutions": []
             },
             {
                 "name": "Rainy Form",
@@ -13265,7 +13197,8 @@
                     "speedAttack": "70",
                     "speedDefense": "70",
                     "speed": "70"
-                }
+                },
+                "evolutions": []
             },
             {
                 "name": "Snowy Form",
@@ -13287,7 +13220,8 @@
                     "speedAttack": "70",
                     "speedDefense": "70",
                     "speed": "70"
-                }
+                },
+                "evolutions": []
             }
         ]
     },
@@ -13587,7 +13521,8 @@
                     "speedAttack": "115",
                     "speedDefense": "60",
                     "speed": "115"
-                }
+                },
+                "evolutions": []
             }
         ]
     },
@@ -14373,7 +14308,8 @@
                     "speedAttack": "140",
                     "speedDefense": "150",
                     "speed": "110"
-                }
+                },
+                "evolutions": []
             }
         ]
     },
@@ -14425,7 +14361,8 @@
                     "speedAttack": "160",
                     "speedDefense": "120",
                     "speed": "110"
-                }
+                },
+                "evolutions": []
             }
         ]
     },
@@ -14475,7 +14412,8 @@
                     "speedAttack": "180",
                     "speedDefense": "160",
                     "speed": "90"
-                }
+                },
+                "evolutions": []
             }
         ]
     },
@@ -14526,7 +14464,8 @@
                     "speedAttack": "150",
                     "speedDefense": "90",
                     "speed": "90"
-                }
+                },
+                "evolutions": []
             }
         ]
     },
@@ -14578,7 +14517,8 @@
                     "speedAttack": "180",
                     "speedDefense": "100",
                     "speed": "115"
-                }
+                },
+                "evolutions": []
             }
         ]
     },
@@ -15475,10 +15415,7 @@
         "evolutions": [
             "burmy",
             "mothim",
-            "burmy",
-            "wormadam",
-            "wormadam",
-            "wormadam"
+            "burmy"
         ],
         "mega": []
     },
@@ -15512,10 +15449,7 @@
         "evolutions": [
             "burmy",
             "mothim",
-            "burmy",
-            "wormadam",
-            "wormadam",
-            "wormadam"
+            "burmy"
         ],
         "mega": []
     },
@@ -17845,7 +17779,8 @@
                     "speedAttack": "105",
                     "speedDefense": "107",
                     "speed": "86"
-                }
+                },
+                "evolutions": []
             },
             {
                 "name": "Wash Rotom",
@@ -17868,7 +17803,8 @@
                     "speedAttack": "105",
                     "speedDefense": "107",
                     "speed": "86"
-                }
+                },
+                "evolutions": []
             },
             {
                 "name": "Frost Rotom",
@@ -17891,7 +17827,8 @@
                     "speedAttack": "105",
                     "speedDefense": "107",
                     "speed": "86"
-                }
+                },
+                "evolutions": []
             },
             {
                 "name": "Fan Rotom",
@@ -17914,7 +17851,8 @@
                     "speedAttack": "105",
                     "speedDefense": "107",
                     "speed": "86"
-                }
+                },
+                "evolutions": []
             },
             {
                 "name": "Mow Rotom",
@@ -17937,7 +17875,8 @@
                     "speedAttack": "105",
                     "speedDefense": "107",
                     "speed": "86"
-                }
+                },
+                "evolutions": []
             }
         ]
     },
@@ -19547,7 +19486,8 @@
                     "speedAttack": "80",
                     "speedDefense": "126",
                     "speed": "50"
-                }
+                },
+                "evolutions": []
             }
         ]
     },
@@ -20291,8 +20231,7 @@
             "speed": "50"
         },
         "evolutions": [
-            "darumaka",
-            "darmanitan"
+            "darumaka"
         ],
         "mega": []
     },
@@ -23182,7 +23121,8 @@
                     "speedAttack": "120",
                     "speedDefense": "90",
                     "speed": "95"
-                }
+                },
+                "evolutions": []
             },
             {
                 "name": "White Kyurem",
@@ -23205,7 +23145,8 @@
                     "speedAttack": "170",
                     "speedDefense": "100",
                     "speed": "95"
-                }
+                },
+                "evolutions": []
             }
         ]
     },
@@ -24190,8 +24131,7 @@
             "speed": "68"
         },
         "evolutions": [
-            "espurr",
-            "meowstic"
+            "espurr"
         ],
         "mega": []
     },
@@ -24223,8 +24163,7 @@
         },
         "evolutions": [
             "honedge",
-            "doublade",
-            "aegislash"
+            "doublade"
         ],
         "mega": []
     },
@@ -24256,8 +24195,7 @@
         },
         "evolutions": [
             "honedge",
-            "doublade",
-            "aegislash"
+            "doublade"
         ],
         "mega": []
     },
@@ -25422,7 +25360,8 @@
                     "speedAttack": "160",
                     "speedDefense": "110",
                     "speed": "110"
-                }
+                },
+                "evolutions": []
             }
         ]
     },
@@ -26165,7 +26104,7 @@
         "link": "https://pokemondb.net/pokedex/rockruff",
         "name": "Rockruff",
         "description": "Rockruff is a Rock type Pokémon introduced in Generation 7. It is known as the Puppy Pokémon.\nRockruff has an excellent sense of smell, and once it has smelled an odor, it doesn’t forget it! There are tales of these Pokémon getting separated from their Trainers, then using the faintest traces of their scent to track them for days until they are reunited!\nRockruff is a sociable Pokémon, but as it grows, its disposition gets wilder. If it begins to howl when the sun goes down, that is proof that it’s close to evolving. It’s said that it leaves its Trainer’s side to evolve and returns again when fully evolved.",
-        "icon": "https://img.pokemondb.net/sprites/ultra-sun-ultra-moon/small/rockruff-own-tempo.jpg",
+        "icon": "https://img.pokemondb.net/sprites/ultra-sun-ultra-moon/small/rockruff.jpg",
         "image": "https://img.pokemondb.net/artwork/rockruff.jpg",
         "types": [
             "Rock"
@@ -26188,11 +26127,7 @@
             "speed": "60"
         },
         "evolutions": [
-            "rockruff",
-            "lycanroc",
-            "lycanroc",
-            "rockruff",
-            "lycanroc"
+            "rockruff"
         ],
         "mega": [
             {
@@ -26217,11 +26152,7 @@
                     "speed": "60"
                 },
                 "evolutions": [
-                    "rockruff",
-                    "lycanroc",
-                    "lycanroc",
-                    "rockruff",
-                    "lycanroc"
+                    "rockruff"
                 ]
             }
         ]
@@ -27898,7 +27829,8 @@
                     "speedAttack": "113",
                     "speedDefense": "109",
                     "speed": "77"
-                }
+                },
+                "evolutions": []
             },
             {
                 "name": "Dawn Wings Necrozma",
@@ -27921,7 +27853,8 @@
                     "speedAttack": "157",
                     "speedDefense": "127",
                     "speed": "77"
-                }
+                },
+                "evolutions": []
             },
             {
                 "name": "Ultra Necrozma",
@@ -27944,7 +27877,8 @@
                     "speedAttack": "167",
                     "speedDefense": "97",
                     "speed": "129"
-                }
+                },
+                "evolutions": []
             }
         ]
     },
