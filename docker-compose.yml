@@ -1,6 +1,6 @@
 version: '3'
 services:
-  server:
+  api:
     build: .
     command: npm start
     ports:

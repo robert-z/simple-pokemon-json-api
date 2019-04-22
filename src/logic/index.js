@@ -1,12 +1,12 @@
 "use strict";
-var file = __dirname + "/../../data/pokemon.json";
-
-const fs = require("fs");
 
 const logic = {
+  __pokemons__: null,
+
   searchPokemonBy({ query = "", page = 1, perPage = 20 }) {
     page = Number(page);
     perPage = Number(perPage);
+
     if (typeof query !== "string") throw TypeError(`${query} is not a string`);
     if (!query.trim().length) throw Error(`query is empty or blank`);
     if (typeof page !== "number") throw TypeError(`${page} is not a number`);
@@ -14,23 +14,23 @@ const logic = {
       throw TypeError(`${perPage} is not a number`);
 
     return (async () => {
-      const pokemonsFile = fs.readFileSync(file, "utf8");
-      const pokemons = JSON.parse(pokemonsFile);
       let results = [];
 
       const showFrom = perPage * (page - 1);
       const showTo = showFrom + perPage;
 
-      for (var i = 0; i < pokemons.length; i++) {
+      for (let i = 0; i < this.__pokemons__.length; i++) {
         const pokemon = {};
-        for (const key in pokemons[i]) {
+        const variation = this.__pokemons__[i].variations[0];
+
+        for (const key in variation) {
           if (
-            typeof pokemons[i][key] === "string" &&
-            pokemons[i][key].indexOf(query) != -1
+            typeof variation[key] === "string" &&
+            variation[key].indexOf(query) != -1
           ) {
-            pokemon.num = pokemons[i].num;
-            pokemon.name = pokemons[i].name;
-            pokemon.icon = pokemons[i].icon;
+            pokemon.num = this.__pokemons__[i].num;
+            pokemon.name = this.__pokemons__[i].name;
+            pokemon.image = variation.image;
             results.push(pokemon);
             results = [...new Set(results)];
           }
@@ -49,49 +49,30 @@ const logic = {
   getPokemons({ page = 1, perPage = 20 }) {
     page = Number(page);
     perPage = Number(perPage);
+
     if (typeof page !== "number") throw TypeError(`${page} is not a number`);
     if (typeof perPage !== "number")
       throw TypeError(`${perPage} is not a number`);
 
+    const showFrom = perPage * (page - 1);
+    const showTo = showFrom + perPage;
+
     return (async () => {
-      const pokemonsFile = fs.readFileSync(file, "utf8");
-      const pokemons = JSON.parse(pokemonsFile);
-
-      const showFrom = perPage * (page - 1);
-      const showTo = showFrom + perPage;
-
-      const pokemonsList = pokemons.map(pokemon => {
-        return {
-          num: pokemon.num,
-          name: pokemon.name,
-          icon: pokemon.icon
-        };
-      });
+      const pokemonsList = this.mapListPokemon(this.__pokemons__);
 
       return {
         data: pokemonsList.slice(showFrom, showTo),
         page: page,
-        totalPages: Math.ceil(pokemons.length / perPage),
-        totalResults: pokemons.length
+        totalPages: Math.ceil(this.__pokemons__.length / perPage),
+        totalResults: this.__pokemons__.length
       };
     })();
   },
 
   getAllPokemons() {
     return (async () => {
-      const pokemonsFile = fs.readFileSync(file, "utf8");
-      const pokemons = JSON.parse(pokemonsFile);
-
-      const pokemonsList = pokemons.map(pokemon => {
-        return {
-          num: pokemon.num,
-          name: pokemon.name,
-          icon: pokemon.icon
-        };
-      });
-
       return {
-        data: pokemonsList
+        data: this.mapListPokemon(this.__pokemons__)
       };
     })();
   },
@@ -101,16 +82,24 @@ const logic = {
     if (!name.trim().length) throw Error(`name is empty or blank`);
 
     return (async () => {
-      let pokemons = fs.readFileSync(file, "utf8");
-
-      let pokemon = JSON.parse(pokemons).filter(
-        pok => pok.name.toLowerCase() === name.toLowerCase()
+      let pokemon = this.__pokemons__.find(
+        pokemon => pokemon.name.toLowerCase() === name.toLowerCase()
       );
 
-      if (!pokemon[0]) throw Error(`Not Found`);
+      if (!pokemon) throw Error(`Pokémon not found`);
 
-      return pokemon[0];
+      return pokemon;
     })();
+  },
+
+  mapListPokemon(pokemons) {
+    return pokemons.map(pokemon => {
+      return {
+        num: pokemon.num,
+        name: pokemon.name,
+        image: pokemon.variations[0].image
+      };
+    });
   }
 };
 

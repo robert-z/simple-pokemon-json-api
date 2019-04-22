@@ -1,32 +1,15 @@
 // External dependencies
-
+require("dotenv").config();
 const axios = require("axios");
 const cheerio = require("cheerio");
 const chalk = require("chalk");
 const fs = require("fs");
 
 const url = "https://pokemondb.net";
-const urlAllPokemon = `${url}/pokedex/all`;
 const outputFile = __dirname + "/../../data/pokemon.json";
 
-console.log(
-  chalk.yellow.bgBlue(
-    `\n  Scraping of ${chalk.underline.bold(urlAllPokemon)} initiated...\n`
-  )
-);
-
-const getDetail = ($, tabsetBasics, tab = 0) => {
-  const tabList = tabsetBasics.children(".tabs-tab-list").eq(0);
-
-  const tabsPanel = tabsetBasics
-    .children(".tabs-panel-list")
-    .eq(0)
-    .children(".tabs-panel")
-    .eq(tab);
-
-  const name = $(".tabs-tab", tabList)
-    .eq(tab)
-    .text();
+const getDetail = async ({ $, variation, tab, panelList }) => {
+  const tabsPanel = panelList.children(".tabs-panel").eq(tab);
 
   const description = $(".grid-row")
     .eq(0)
@@ -34,81 +17,11 @@ const getDetail = ($, tabsetBasics, tab = 0) => {
     .text()
     .trim();
 
-  const image = $("img", tabsPanel).attr("src");
-
-  const types = [];
-  $(".vitals-table .type-icon", tabsPanel).each((i, e) => {
-    types[i] = $(e).text();
-  });
-
-  const specie = $(".vitals-table tr", tabsPanel)
-    .eq(2)
-    .find("td")
-    .text();
-  const height = $(".vitals-table tr", tabsPanel)
-    .eq(3)
-    .find("td")
-    .text();
-  const weight = $(".vitals-table tr", tabsPanel)
-    .eq(4)
-    .find("td")
-    .text();
-
-  const abilities = [];
-  $(".vitals-table tr", tabsPanel)
-    .eq(5)
-    .find(".text-muted a")
-    .each((i, e) => {
-      abilities[i] = $(e).text();
-    });
-
-  const statsBlock = $("#dex-stats", tabsPanel).parent();
-  const statsTableTr = $(".vitals-table", statsBlock);
-
-  const stats = {};
-
-  stats.total = $("tr", statsTableTr)
-    .eq(6)
-    .find("td")
-    .text();
-
-  stats.hp = $("tr", statsTableTr)
-    .eq(0)
-    .find("td")
-    .eq(0)
-    .text();
-
-  stats.attack = $("tr", statsTableTr)
-    .eq(1)
-    .find("td")
-    .eq(0)
-    .text();
-
-  stats.defense = $("tr", statsTableTr)
-    .eq(2)
-    .find("td")
-    .eq(0)
-    .text();
-
-  stats.speedAttack = $("tr", statsTableTr)
-    .eq(3)
-    .find("td")
-    .eq(0)
-    .text();
-
-  stats.speedDefense = $("tr", statsTableTr)
-    .eq(4)
-    .find("td")
-    .eq(0)
-    .text();
-
-  stats.speed = $("tr", statsTableTr)
-    .eq(5)
-    .find("td")
-    .eq(0)
-    .text();
-
-  let icon;
+  const pokemonImageUrl = $("img", tabsPanel).attr("src");
+  let fileName = pokemonImageUrl.split("/");
+  fileName = fileName[fileName.length - 1];
+  const image = "images/" + fileName;
+  await downloadImage(pokemonImageUrl, fileName, "image");
 
   const evolutionsBlock = $(".infocard-list-evo").children(".infocard ");
   const evolutions = [];
@@ -124,18 +37,108 @@ const getDetail = ($, tabsetBasics, tab = 0) => {
           .children("small").length > 2;
 
       if (!isAlolan) {
-        if (evoName === name.toLowerCase()) {
-          icon = $(".img-sprite", e).attr("data-src");
-        }
         evolutions.push(evoName);
       }
     }
   });
 
-  return {
-    name,
+  const types = [];
+  $(".vitals-table .type-icon", tabsPanel).each((i, e) => {
+    types.push($(e).text());
+  });
+
+  const specie = $(".vitals-table tr", tabsPanel)
+    .eq(2)
+    .find("td")
+    .text();
+
+  const regExp = /\-?\d+\.\d+/g;
+
+  const heights = $(".vitals-table tr", tabsPanel)
+    .eq(3)
+    .find("td")
+    .text()
+    .match(regExp);
+  const height = Number(heights[heights.length - 1]);
+
+  const weights = $(".vitals-table tr", tabsPanel)
+    .eq(4)
+    .find("td")
+    .text()
+    .match(regExp);
+  const weight = Number(weights[weights.length - 1]);
+
+  const abilities = [];
+  $(".vitals-table tr", tabsPanel)
+    .eq(5)
+    .find(".text-muted a")
+    .each((i, e) => {
+      abilities.push($(e).text());
+    });
+
+  const statsBlock = $("#dex-stats", tabsPanel).parent();
+  const statsTableTr = $(".vitals-table", statsBlock);
+
+  const stats = {};
+
+  stats.total = Number(
+    $("tr", statsTableTr)
+      .eq(6)
+      .find("td")
+      .text()
+  );
+
+  stats.hp = Number(
+    $("tr", statsTableTr)
+      .eq(0)
+      .find("td")
+      .eq(0)
+      .text()
+  );
+
+  stats.attack = Number(
+    $("tr", statsTableTr)
+      .eq(1)
+      .find("td")
+      .eq(0)
+      .text()
+  );
+
+  stats.defense = Number(
+    $("tr", statsTableTr)
+      .eq(2)
+      .find("td")
+      .eq(0)
+      .text()
+  );
+
+  stats.speedAttack = Number(
+    $("tr", statsTableTr)
+      .eq(3)
+      .find("td")
+      .eq(0)
+      .text()
+  );
+
+  stats.speedDefense = Number(
+    $("tr", statsTableTr)
+      .eq(4)
+      .find("td")
+      .eq(0)
+      .text()
+  );
+
+  stats.speed = Number(
+    $("tr", statsTableTr)
+      .eq(5)
+      .find("td")
+      .eq(0)
+      .text()
+  );
+
+  return Promise.resolve({
+    name: variation ? variation : null,
     description,
-    icon,
     image,
     types,
     specie,
@@ -144,36 +147,60 @@ const getDetail = ($, tabsetBasics, tab = 0) => {
     abilities,
     stats,
     evolutions
-  };
+  });
 };
 
-const pokemonDetail = async url => {
+const pokemonDetail = async ({ pokemonLink }) => {
   try {
-    const response = await axios.get(url);
+    const response = await axios.get(pokemonLink);
+
     const $ = cheerio.load(response.data);
 
     const tabsetBasics = $(".tabset-basics").eq(0);
 
-    const details = getDetail($, tabsetBasics, 0);
+    const tabList = tabsetBasics.children(".tabs-tab-list").eq(0);
 
-    const tabPanelList = tabsetBasics.children(".tabs-panel-list").eq(0);
+    const panelList = tabsetBasics.children(".tabs-panel-list").eq(0);
 
-    const mega = [];
-    tabPanelList
-      .children(".tabs-panel")
-      .not(".active")
-      .map((i, el) => {
-        mega[i] = getDetail($, tabsetBasics, i + 1);
-        delete mega[i].description;
+    let tab = 0;
+
+    const pokDetail = tabList.find(".tabs-tab").map(async (i, e) => {
+      const name = $(e).text();
+
+      tab = i;
+
+      return await getDetail({
+        $,
+        variation: name,
+        tab,
+        panelList
       });
+    });
 
-    return { ...details, mega };
+    return Promise.all(pokDetail.get());
+
   } catch (error) {
     console.error(error);
   }
 };
 
-const getPokemonList = async url => {
+const pokemonListDetail = async ({ $, el, num, url }) => {
+  if (num > 0 && num <= 150) {
+    const name = $(".ent-name", el).text();
+
+    const variation = $(".text-muted", el).text();
+
+    const link = $(".ent-name", el).attr("href");
+
+    const pokemonLink = url + link;
+
+    const pokemon = await pokemonDetail({ pokemonLink });
+
+    return { num, name, variations: pokemon, link: pokemonLink };
+  }
+};
+
+const getPokemonList = async ({ url }) => {
   try {
     const response = await axios.get(`${url}/pokedex/all`);
 
@@ -181,32 +208,54 @@ const getPokemonList = async url => {
 
     const pokemons = $("#pokedex tbody tr");
 
-    const pokemonPromises = pokemons
-      .not((i, el) => {
-        return $(".text-muted", el).length > 0;
-      })
-      .map(async (i, el) => {
-        const num = $(".infocard-cell-data", el).text();
+    let pokNums = [];
 
-        const link = $(".ent-name", el).attr("href");
+    let pokemonsResult = [];
 
-        const details = await pokemonDetail(url + link);
+    const pokemonPromises = pokemons.map(async (i, el) => {
+      const num = Number($(".infocard-cell-data", el).text());
 
-        const pokemon = {
-          num,
-          link: url + link
-        };
+      if (pokNums.indexOf(num) === -1) {
+        pokNums.push(num);
 
-        return { ...pokemon, ...details };
+        const pokemon = await pokemonListDetail({ $, el, num, url });
+
+        pokemonsResult.push(pokemon);
+
+        return pokemon;
+      }
+    });
+
+    return Promise.all(pokemonPromises.get()).then(() => {
+      return pokemonsResult.sort(function(a, b) {
+        return a.num - b.num;
       });
-
-    return Promise.all(pokemonPromises.get());
+    });
   } catch (error) {
     console.error(error);
   }
 };
 
-const results = Promise.resolve(getPokemonList(url)).then(res => {
+const downloadImage = async (url, fileName, type = "image") => {
+  const writer = fs.createWriteStream(
+    `${__dirname}/../../public/images/${type}/${fileName}`
+  );
+
+  const response = await axios({
+    url,
+    method: "GET",
+    responseType: "stream"
+  });
+
+  response.data.pipe(writer);
+
+  return new Promise((resolve, reject) => {
+    writer.on("finish", resolve);
+    writer.on("error", reject);
+  });
+};
+
+Promise.resolve(getPokemonList({ url })).then(res => {
   fs.writeFile(outputFile, JSON.stringify(res, null, 4), err => {
     if (err) {
       console.log(err);
